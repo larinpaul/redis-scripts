@@ -1,0 +1,3 @@
+REDIS_PW=mypass
+REDIS_HOST=redis-13071.c267.us-east-1-14.ec2.cloud.redislabs.com
+REDIS_PORT=13071
