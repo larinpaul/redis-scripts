@@ -5,6 +5,7 @@
 //               Async doesn't have resolve or reject parameters
 //               Everything after Await is placed in an event queue.
 
+// Adding async to this function won't benefit us
 function walkDog() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
