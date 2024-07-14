@@ -23,18 +23,39 @@ function walkDog() {
 }
 
 function cleanKitchen() {
+    // ...
 
+    // GOTTA COME BACK AND FINISH THIS!
 }
 
 function takeOutTrash() {
+    // ...
+}
+
+// // We can write all this code into async function...
+// walkDog.dog().then(value => {console.log(value); return cleanKitchen()})
+//              .then(value => {console.log(value); return takeOutTrash()})
+//              .then(value => {console.log(value); console.log("You finished all the chores")})
+//              .catch(error => console.error(error));
+
+async function doChores() {
+ 
+    try {
+        const walkDogResult = await walkDog();
+        console.log(walkDogResult);
+    
+        const cleanKitchenResult = await cleanKitchen();
+        console.log(cleanKitchenResult);
+    
+        const takeOutTrashResult = await takeOutTrash();
+        console.log(takeOutTrashResult);
+    
+        console.log("You finished all the chores!");
+    }
+    catch(error) {
+        console.error(error);
+    }
 
 }
 
-walkDog.dog().then(value => {console.log(value); return cleanKitchen()})
-             .then(value => {console.log(value); return takeOutTrash()})
-             .then(value => {console.log(value); console.log("You finished all the chores")})
-             .catch(error => console.error(error));
-
-console.log("Hey there! :)");
-
-
+doChores()
